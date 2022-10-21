@@ -56,7 +56,7 @@
   color: #cdcdcd;
 }
 
-.topbox_skin_minimal .topbox_prev {
+/* .topbox_skin_minimal .topbox_prev {
   top: 2px;
   right: 116px;
   left: auto;
@@ -65,7 +65,7 @@
 .topbox_skin_minimal .topbox_next {
   top: 2px;
   right: 59px;
-}
+} */
 
 .topbox_skin_minimal .topbox_close {
   top: 2px;

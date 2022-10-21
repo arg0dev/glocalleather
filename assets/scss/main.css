@@ -144,6 +144,18 @@ main .details .col-xl-12 iframe {
   .date img {
     max-width: 200px;
   }
+  .timer span {
+    margin-bottom: 5px;
+  }
+  .topbox_skin_minimal .topbox_prev {
+    top: 2px !important;
+    right: 116px !important;
+    left: auto !important;
+  }
+  .topbox_skin_minimal .topbox_next {
+    top: 2px !important;
+    right: 59px !important;
+  }
 }
 /* Media Query $End */
 /* Lightbox CSS $Start */
@@ -155,15 +167,15 @@ main .details .col-xl-12 iframe {
 }
 
 .topbox_next {
-  top: 50% !important;
-  right: 59px !important;
-  transform: translateY(-50%) !important;
+  top: 50%;
+  right: 59px;
+  transform: translateY(-50%);
 }
 
 .topbox_prev {
-  top: 50% !important;
-  transform: translateY(-50%) !important;
-  left: 59px !important;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 59px;
 }
 
 .topbox_skin_minimal .topbox_prev,
