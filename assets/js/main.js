@@ -2,7 +2,7 @@ $(document).ready(function () {
     $('.gcPop').topbox({
         effect: 'fade',
         skin: 'minimal',
-        keyboardNav: false
+        keyboardNav: true,
     });
 });
 

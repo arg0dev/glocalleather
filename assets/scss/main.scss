@@ -123,6 +123,25 @@ main {
             background: #EFEFEF;
         }
 
+        .gc-line {
+            border: solid 1px #000;
+            padding: 1em;
+        }
+
+        .gc-fill {
+            background-color: #41515A;
+            padding: 1em;
+            color: #fff;
+
+            i {
+                font-size: 18px;
+                color: #fff;
+                position: relative;
+                top: 1px;
+                margin-left: 8px;
+            }
+        }
+
         .col-xl-6 {
             h5 {
                 font-size: 16px;
@@ -186,6 +205,18 @@ main {
     line-height: 45px;
     font-size: 15px;
     background: #41515A;
+}
+
+.topbox_next {
+    top: 50% !important;
+    right: 59px !important;
+    transform: translateY(-50%) !important;
+}
+
+.topbox_prev {
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    left: 59px !important;
 }
 
 .topbox_skin_minimal .topbox_prev,
