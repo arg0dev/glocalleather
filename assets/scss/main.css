@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
+* h1,
+* h2,
+* h3,
+* h4 {
+  font-family: "Playfair Display", serif;
+}
+* a {
+  text-decoration: none;
+  color: #000;
+}
+* a:hover {
+  color: #000;
+}
+* p,
+* h5 {
+  font-family: "Open Sans", sans-serif;
+}
+* hr {
+  opacity: 1;
+  margin: 5px 0;
+}
+
+main .information .col-xl-10 {
+  background: #EFEFEF;
+  padding: 3em;
+}
+main .information .countdown span {
+  font-weight: 600;
+  border: solid 1px #000;
+  padding: 0.5em 1em;
+  color: #000;
+  display: inline-block;
+}
+main .information .countdown .clear {
+  font-weight: 400;
+  padding: initial;
+  border: initial;
+}
+main .carousel .gcSlicker {
+  position: relative;
+}
+main .carousel .gcSlicker .slick-arrow {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0;
+  border: solid 3px #fff;
+  box-shadow: none;
+  outline: none;
+  background: #41515a;
+  height: 50px;
+  width: 50px;
+}
+main .carousel .gcSlicker .slick-next {
+  right: 0;
+}
+main .carousel .gcSlicker .slick-next::before {
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 30px;
+  font-size: 14px !important;
+  z-index: 1;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font: var(--fa-font-solid);
+  content: "\f054";
+  color: #fff;
+}
+main .carousel .gcSlicker .slick-prev {
+  left: 0;
+}
+main .carousel .gcSlicker .slick-prev::before {
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 30px;
+  font-size: 14px !important;
+  z-index: 1;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font: var(--fa-font-solid);
+  content: "\f053";
+  color: #fff;
+}
+main .carousel .gcSlicker img {
+  width: 100%;
+  height: 250px;
+  padding: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .details .col-xl-10 {
+  background: #EFEFEF;
+}
+main .details .col-xl-6 h5 {
+  font-size: 16px;
+}
+main .details .col-xl-6 p {
+  text-decoration: underline;
+  font-size: 14px;
+}
+main .details .col-xl-6:nth-child(2) span {
+  border-bottom: dashed 1px #5e5e5e;
+  font-weight: 600;
+}
+main .details .col-xl-6:nth-child(2) p {
+  text-decoration: none;
+}
+main .details .col-xl-6:nth-child(2) a {
+  font-weight: 600;
+}
+main .details .col-xl-12 iframe {
+  width: 100%;
+  height: 500px;
+}
+
+/* Media Query $Start */
+@media only screen and (max-width: 1200px) {
+  section {
+    margin: 1em;
+  }
+  iframe {
+    height: 300px !important;
+  }
+  .date img {
+    max-width: 200px;
+  }
+}
+/* Media Query $End */
+/* Lightbox CSS $Start */
+.topbox_skin_minimal .topbox_title {
+  padding: 0px 25px;
+  line-height: 45px;
+  font-size: 15px;
+  background: #41515A;
+}
+
+.topbox_skin_minimal .topbox_prev,
+.topbox_skin_minimal .topbox_next,
+.topbox_skin_minimal .topbox_close {
+  font-size: 25px;
+  background-color: #41515A;
+}
+
+.topbox_skin_minimal .topbox_close {
+  line-height: 50px;
+}
+
+.topbox_skin_minimal .topbox_fill {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+/* Lightbox CSS $End *//*# sourceMappingURL=main.css.map */
