@@ -21,6 +21,27 @@
   margin: 5px 0;
 }
 
+.gc-fill {
+  background-color: #41515A;
+  padding: 1em;
+  color: #fff;
+}
+.gc-fill i {
+  font-size: 18px;
+  color: #fff;
+  position: relative;
+  top: 1px;
+  margin-left: 8px;
+}
+.gc-fill:hover {
+  color: #fff !important;
+}
+
+sup {
+  vertical-align: super;
+  font-size: 10px;
+}
+
 main .information .col-xl-10 {
   background: #EFEFEF;
   padding: 3em;
@@ -98,18 +119,6 @@ main .details .col-xl-10 {
 main .details .gc-line {
   border: solid 1px #000;
   padding: 1em;
-}
-main .details .gc-fill {
-  background-color: #41515A;
-  padding: 1em;
-  color: #fff;
-}
-main .details .gc-fill i {
-  font-size: 18px;
-  color: #fff;
-  position: relative;
-  top: 1px;
-  margin-left: 8px;
 }
 main .details .col-xl-6 h5 {
   font-size: 16px;
