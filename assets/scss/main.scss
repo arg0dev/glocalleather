@@ -1954,6 +1954,13 @@ body {
         }
 
         .inPage {
+
+            .bigTitle {
+                h1 {
+                    font-size: 3em;
+                }
+            }
+
             .miniGallery {
                 img {
                     padding: 0 !important;

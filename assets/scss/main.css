@@ -1503,6 +1503,9 @@ body {
     background: #FFF;
     padding: 2em 2em 4em 2em;
   }
+  body .inPage .bigTitle h1 {
+    font-size: 3em;
+  }
   body .inPage .miniGallery img {
     padding: 0 !important;
   }
