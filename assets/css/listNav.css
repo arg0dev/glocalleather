@@ -1,0 +1,113 @@
+.listNav,
+.ln-letters {
+  overflow: hidden;
+}
+
+.ln-letters {
+  display: flex;
+  justify-content: space-between;
+  background: #D9D9D9;
+  position: relative;
+  padding: 1em;
+}
+
+.listNavHide {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+.letterCountShow {
+  display: block;
+}
+
+.ln-letters a {
+  border: none;
+  border-right: none;
+  display: block;
+  float: left;
+  font-size: 1em;
+  padding: .5em 1em;
+  text-decoration: none;
+}
+
+.ln-no-match {
+  border: none !important;
+}
+
+.ln-no-match:hover {
+  background: #fff !important;
+  color: #000 !important;
+}
+
+.ln-letters a:after {
+  font-size: 14px !important;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font: var(--fa-font-solid);
+  content: "\f054";
+  color: #000;
+  position: absolute;
+  top: 60%;
+  transform: translateY(-50%);
+  bottom: 0;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.all:after {
+  display: none !important;
+}
+
+.ln-letters .ln-last {
+  border-right: none;
+}
+
+.ln-letters a:hover,
+.ln-letters .ln-selected {
+  background-color: #D9D9D9;
+}
+
+.ln-selected {
+  transition: all 0.5s ease;
+  text-decoration: underline !important;
+  font-weight: 700 !important;
+}
+
+.ln-letters .all {
+  order: 12;
+  transition: all 0.5s ease;
+}
+
+.ln-letters .ln-disabled {
+  color: #ccc;
+}
+
+.ln-letter-count {
+  color: #336699;
+  font-size: .8em;
+  left: 0;
+  line-height: 1.35;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 20px;
+}
+
+@media only screen and (max-width:1200px) {
+  .ln-letters {
+    display: block !important;
+    justify-content: space-between;
+  }
+
+  .ln-letters a:after {
+    display: none !important;
+  }
+}
+
+/*# sourceMappingURL=listnav.css.map */
