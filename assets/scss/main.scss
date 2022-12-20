@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Lato:wght@400;500;600;700;800;900&display=swap");
+@import "noWrap.css";
 
 /* SASS Variables */
 $head: "Playfair Display", serif;
@@ -462,11 +463,17 @@ body {
     }
 
     .mainSlider {
-
         .imgSlider {
             height: 600px;
             width: 100%;
             position: relative;
+            background: $b;
+            overflow: hidden;
+
+            .yt-container {
+                height: 600px;
+                margin-top: -100px;
+            }
 
             img {
                 height: 600px;
@@ -474,17 +481,43 @@ body {
                 width: 100%;
             }
 
+            &::before {
+                width: 100%;
+                height: 600px;
+                content: "";
+                background: #000;
+                opacity: 0.5;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                position: absolute;
+                z-index: 1;
+            }
         }
 
         .contents {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
+            left: 0;
+            right: 0;
+            z-index: 2;
 
             .inContent {
-                background: $w;
+                // background: $w;
                 padding: 4em 2em 3em 2em;
                 position: relative;
+                margin: 0 15% 0 2%;
+                color: #fff;
+
+                a {
+                    display: inline-block;
+                }
+
+                p {
+                    color: $dgel;
+                }
             }
         }
 
@@ -493,13 +526,19 @@ body {
             position: absolute;
             z-index: 1;
             font-size: 0;
-            top: 30px;
             cursor: pointer;
+            background: $w;
+            width: 50px;
+            height: 50px;
+            text-align: center;
         }
 
         .slick-next {
 
-            left: 85px;
+            // left: 85px;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
 
             &::before {
                 left: 0;
@@ -517,7 +556,9 @@ body {
         }
 
         .slick-prev {
-            left: 50px;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
 
             &::before {
                 left: 0;
@@ -1785,6 +1826,26 @@ body {
 /* All Media Queries */
 @media only screen and (max-width: 998px) {
     body {
+
+        .mainSlider {
+            .yt-container {
+                .nowrap {
+                    width: 320%;
+                }
+            }
+
+            .inContent {
+                margin: 0 30px 0 20px !important;
+
+                p {
+                    overflow: hidden;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 10;
+                    -webkit-box-orient: vertical;
+                    position: relative;
+                }
+            }
+        }
 
         .frame {
 
