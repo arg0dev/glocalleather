@@ -710,6 +710,7 @@ if (!YT.loading) {
 
 var player;
 var iframe = document.querySelectorAll('.player')
+var mainSlider = document.querySelectorAll('.mainSlider .mainPlayer')
 
 function onYouTubePlayerAPIReady() {
 
@@ -747,4 +748,58 @@ function onYouTubePlayerAPIReady() {
         }
         );
     });
+
+    mainSlider.forEach(element => {
+        const playerProperties = {
+            dataId: element.getAttribute('data-identity'),
+            dataHeight: element.getAttribute('data-height'),
+            dataWidth: element.getAttribute('data-width'),
+            dataMute: element.getAttribute('data-mute'),
+            dataControls: element.getAttribute('data-controls'),
+            dataAutoplay: element.getAttribute('data-autoplay'),
+            dataLoop: element.getAttribute('data-loop'),
+            dataInline: element.getAttribute('data-inline'),
+            dataPlaylist: element.getAttribute('data-playlist'),
+            dataModestBranding: element.getAttribute('data-modest'),
+            dataRel: element.getAttribute('data-rel'),
+            dataFs: element.getAttribute('data-fs'),
+        }
+
+        player = new YT.Player(element, {
+            height: Object.values(playerProperties)[1],
+            width: Object.values(playerProperties)[2],
+            videoId: Object.values(playerProperties)[0],
+            playerVars: {
+                mute: Object.values(playerProperties)[3],
+                controls: Object.values(playerProperties)[4],
+                autoplay: Object.values(playerProperties)[5],
+                loop: Object.values(playerProperties)[6],
+                playsinline: Object.values(playerProperties)[7],
+                playlist: Object.values(playerProperties)[8],
+                modestbranding: Object.values(playerProperties)[9],
+                rel: Object.values(playerProperties)[10],
+                fs: Object.values(playerProperties)[11],
+            },
+            events: {
+                'onReady': onPlayerReady,
+                'onStateChange': onPlayerStateChange
+            },
+        }
+        );
+    });
+
+    function onPlayerReady(event) {
+        event.target.playVideo();
+    }
+    
+    let done = false;
+    function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING && !done) {
+            setTimeout(stopVideo, 6000);
+            done = true;
+        }
+    }
+    function stopVideo() {
+        player.stopVideo();
+    }
 }
