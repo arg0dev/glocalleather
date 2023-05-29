@@ -203,13 +203,13 @@ body {
     font-family: $main;
 
     main {
-        margin-top: 8em;
+        margin-top: 6em;
     }
 
     .bannerArea {
         position: relative;
         margin-bottom: 8em;
-
+        background: $b;
         .breadcrumbs {
             a {
                 &:after {
@@ -234,6 +234,9 @@ body {
             width: 100%;
             min-height: 500px;
             object-fit: cover;
+            position: relative;
+            z-index: -1;
+            opacity: 0.5;
         }
 
         .abs {
@@ -245,8 +248,15 @@ body {
         }
 
         .details {
-            background: $w;
-            padding: 3em 2em 2em 3em;
+            color: $w;
+            background: transparent;
+            padding: 3em 2em 4em 3em;
+            a {
+                color: $w !important;
+                &::after {
+                    color: $w;
+                }
+            }
         }
     }
 
@@ -471,7 +481,8 @@ body {
             overflow: hidden;
 
             .yt-container {
-                height: 600px;
+                // height: 600px;
+                overflow: hidden;
                 margin-top: -100px;
             }
 
@@ -2011,12 +2022,12 @@ body {
                 }
             }
 
-            .abs {
-                position: relative !important;
-            }
+            // .abs {
+            //     position: relative !important;
+            // }
 
             .details {
-                background: $w;
+                background: transparent;
                 padding: 2em 2em 4em 2em;
             }
         }

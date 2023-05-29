@@ -166,11 +166,12 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 body main {
-  margin-top: 8em;
+  margin-top: 6em;
 }
 body .bannerArea {
   position: relative;
   margin-bottom: 8em;
+  background: #000;
 }
 body .bannerArea .breadcrumbs a:after {
   font-size: 14px !important;
@@ -189,6 +190,9 @@ body .bannerArea img {
   min-height: 500px;
   -o-object-fit: cover;
      object-fit: cover;
+  position: relative;
+  z-index: -1;
+  opacity: 0.5;
 }
 body .bannerArea .abs {
   position: absolute;
@@ -198,8 +202,15 @@ body .bannerArea .abs {
   right: 0;
 }
 body .bannerArea .details {
-  background: #FFF;
-  padding: 3em 2em 2em 3em;
+  color: #FFF;
+  background: transparent;
+  padding: 3em 2em 4em 3em;
+}
+body .bannerArea .details a {
+  color: #FFF !important;
+}
+body .bannerArea .details a::after {
+  color: #FFF;
 }
 body .full-width {
   margin-bottom: 2em !important;
@@ -381,7 +392,7 @@ body .mainSlider .imgSlider {
   overflow: hidden;
 }
 body .mainSlider .imgSlider .yt-container {
-  height: 600px;
+  overflow: hidden;
   margin-top: -100px;
 }
 body .mainSlider .imgSlider img {
@@ -1542,11 +1553,8 @@ body {
   body .bannerArea .breadcrumbs a {
     font-size: 15px;
   }
-  body .bannerArea .abs {
-    position: relative !important;
-  }
   body .bannerArea .details {
-    background: #FFF;
+    background: transparent;
     padding: 2em 2em 4em 2em;
   }
   body .inPage .bigTitle h1 {
